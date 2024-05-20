@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Detector</title>
+    <link rel="stylesheet" href="static/Plagiarism.css">
+    <style>
+        /* CSS for result box */
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        /* CSS for bordered box */
+        .bordered-box {
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        /* CSS for green result box */
+        .green-box {
+            background-color: #6efe73; /* Light green color */
+        }
+        
+        /* CSS for red result box */
+        .red-box {
+            background-color: #ff4a4a; /* Light red color */
+        }
+        
+        /* CSS for bold result text */
+        .bold-result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PlagiaSure AI</h1>
+    </header>
+    <div class="container">
+        <h3>Where Ideas Flourish, Plagiarism Vanishes</h3>
+        <h2>Check for Plagiarism</h2>
+        <form id="plagiarismForm" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="text">Enter or paste text:</label>
+                <textarea id="text" name="text" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="file">Or upload a file:</label>
+                <input type="file" id="file" name="file" accept=".txt, .doc, .docx, .pdf">
+            </div>
+            <button type="button" onclick="checkPlagiarism()">Check for Plagiarism</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        function checkPlagiarism() {
+            var formData = new FormData(document.getElementById('plagiarismForm'));
+            fetch('/check_plagiarism', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                var resultBox = document.getElementById('results');
+                var resultText = data.result;
+    
+                var borderedBox = document.createElement('div');
+                borderedBox.classList.add('bordered-box');
+                borderedBox.classList.add('bold-result'); // Add bold styling to the result text
+                borderedBox.innerText = resultText;
+                resultBox.innerHTML = ''; // Clear previous content
+                resultBox.appendChild(borderedBox);
+                
+                // Set result box color based on content
+                if (resultText.includes("No Plagiarism")) {
+                    resultBox.classList.remove('red-box'); // Remove red color if present
+                    resultBox.classList.add('green-box');
+                } else if (resultText.includes("Plagiarism")) {
+                    resultBox.classList.remove('green-box'); // Remove green color if present
+                    resultBox.classList.add('red-box');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #ffffff;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background: rgb(252,243,255);
+background: linear-gradient(180deg, rgba(252,243,255,1) 0%, rgba(246,234,220,1) 43%, rgba(238,215,174,1) 100%);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position:absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 100%;
+    border-radius: 5%;
+  }
+  .navbar {
+    width: 85%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+button {
+  color: #946efd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: rgb(1, 149, 160);
+  color: #fff;
+  transition: 0.6s;
+}
+
+.btn1 {
+  margin-right: 10px;
+}
+.content {
+  color: #000000;
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  transform: translateY(-50%);
+  z-index: 2;
+  
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px 0 3px;
+  line-height: 80px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+ 
+#btn2 {   
+  border-radius: 5px;
+       background-color: #0b75ff;   
+       width: 100%;  
+        color: rgb(255, 255, 255);   
+        padding: 8px;   
+        margin: 5px 0px;   
+        border: none;   
+        cursor: pointer;   
+        margin-top: 10px;
+      }   
+#btn3{
+  border-radius: 5px;
+       background-color: #fbfbfc;   
+       width: 47%;
+        color: rgb(0, 0, 0);   
+        padding: 8px;   
+        margin: 5px 0px;   
+        border: none;   
+        cursor: pointer;   
+        border: 0.1px solid rgb(226, 226, 226); 
+        font-family:sans-serif;
+        font-weight: bold;
+        margin: auto;
+        text-align: center;
+        font-size: 13px;
+        
+         
+}
+ 
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 8px 20px ;   
+        display:inline-block;  
+        border: 0.1px solid rgb(224, 224, 224); 
+        border-radius: 0.5vb;
+        box-sizing: border-box;   
+        color: #9c9c9c;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #f0f0f0;
+        
+    }  
+ #btn2:hover {   
+        opacity: 0.7;   
+    }   
+
+    #btn3:hover {   
+      opacity: 0.7;  
+      background: #e1e1e1;
+      border: 1px solid #d0d0d0; 
+      
+  }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 1px;   
+        background-color: rgb(255, 255, 255);  
+        width: 60%;
+    }   
+a{
+  text-decoration: none;
+  font-size: 13px;
+}
+.but{
+  display: inline;
+}
+
+#googleSignIn{
+  width: 12px;
+  align-items: center;
+  margin-right: 6px;
+  
+}
+hr {
+margin-bottom: 25px;
+margin-top: 20px;
+}
+#log{
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 25px;
+}
+.join{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+footer.social-menu ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+.social-menu {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.social-menu ul li {
+  list-style: none;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-menu ul li .fab {
+  font-size: 22px;
+  line-height: 37px;
+  transition: 0.3s;
+  color: rgb(253, 250, 250);
+}
+
+.social-menu ul li .fab:hover {
+  color: #fff;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: darkorange;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(5, 5, 5, 0.5);
+}
+
+.social-menu ul li:nth-child(1) a {
+  background: linear-gradient(
+    135deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.social-menu ul li:nth-child(5) a {
+  background-color: #41b9fa;
+}
+
+.social-menu ul li:nth-child(2) a {
+  background-color: #0077b5;
+}
+
+.social-menu ul li:nth-child(3) a {
+  background-color: #4267b2;
+}
+
+.social-menu ul li:nth-child(4) a {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+
+/* Social Icon Hover effect */
+.social-menu ul li a:hover {
+  transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+  background: linear-gradient(
+    135deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #41b9fa;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #0077b5;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #4267b2;
+}
+
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+#t1{
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 13px;
+}
+@media (max-width: 1440px) {
+  hr {
+    
+    width: 200px;
+  }
+}
+
+
+
+
+
+
+
+/* .auto-slider{
+  position: relative;
+  box-sizing: content-box;
+  display: inline-block;
+  padding: 10px 10px 20px;
+  background: #fff;
+  max-width: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+
+}
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s sliding ease infinite; 
+}
+/* Slider indicator */
+/* .indicator{
+  width: 100%;
+  max-width: 720px;
+  height: 6px;
+  background: #e41b17;
+  position: absolute;
+  bottom: 0;
+  
+  animation: indicating 5s ease infinite; 
+  
+}
+@keyframes sliding{
+  0%{left: 0%; }
+  20%{left: -100%;}
+  40%{left: -200%;}
+  
+}        
+
+@keyframes indicating{
+  from{
+      left: -100%;
+  }
+  to{
+    left: 0;
+}
+}   */ 
+
+.slider{
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 1s;
+}
+
+.slide img{
+  width: 500px;
+  height: 300px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  margin-top: 310px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 3px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 10px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+      

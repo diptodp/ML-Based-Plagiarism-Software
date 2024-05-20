@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script> 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="static/login.css">
+  <title>Welcome to Plagiasure AI</title>
+</head>
+
+<body>
+
+  <div class="split left">
+    <div class="navbar">
+      <h2><a id="log" href="/">PlagiaSure AI</a></h2>
+      <div class="btn">
+        <a href="/signup">
+          <button type="button" class="btn1">Not a member yet? Join</button>
+        </a>
+      </div>
+      <div class="content">
+        <h1>Log in</h1>
+        <form>
+          <div class="container">
+            <label1 id="t1">Username : </label1>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label id="t1">Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <a href="#"> Forgot Password? </a>
+            <button id="btn2" type="submit">Login</button>
+            <hr size="0.1px" width="430px" color="#cccccc">
+            <div class="but">
+              <button id="btn3" type="button" class="cancelbtn">
+                <image id="googleSignIn" src="static/g.png">
+                  Login with Google</image>
+              </button>
+              <button id="btn3" type="button" class="cancelbtn">
+                <image id="googleSignIn" src="static/f.png">
+                  Login with Facebook</image>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="split right">
+    <div class="centered">
+
+
+<div class="slider">
+  <div class="slides">
+    <!--radio buttons start-->
+    <input type="radio" name="radio-btn" id="radio1">
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+
+    
+    <!--radio buttons end-->
+    <!--slide images start-->
+    <div class="slide first">
+      <img src="static/loginb2.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="static/loginb.png" alt="">
+    </div>
+    <div class="slide">
+      <img src="static/bannar2.jpg" alt="">
+    </div>
+    
+    <!--slide images end-->
+    <!--automatic navigation start-->
+    <div class="navigation-auto">
+      <div class="auto-btn1"></div>
+      <div class="auto-btn2"></div>
+      <div class="auto-btn3"></div>
+      
+    </div>
+    <!--automatic navigation end-->
+  </div>
+  <!--manual navigation start-->
+  <div class="navigation-manual">
+    <label for="radio1" class="manual-btn"></label>
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    
+  </div>
+  <!--manual navigation end-->
+</div>
+<!--image slider end-->
+
+<script type="text/javascript">
+var counter = 1;
+setInterval(function(){
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if(counter > 3){
+    counter = 1;
+  }
+}, 5000);
+</script>
+
+      <blockquote class="quote-box fluid-container">
+        <p class="quotation-mark"style="margin-top: 30px;">
+          “
+        </p>
+        <p class="quote-text">This ML-based plagiarism detection system is a powerful tool that can help you to identify
+          and stamp out plagiarism.
+          It is constantly learning and improving, and it offer a new level of accuracy and efficiency in the fight
+          against plagiarism. </p>
+
+        <p class="quotation-mark" alig="right">
+          ,,
+        </p>
+      </blockquote>
+
+      <div class="container-fluid" id="section1">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+          </div>
+        </div>
+
+        <div class="join"><h4>Don't let plagiarism derail your success. Join us today and protect your future.</h4>
+
+        </div>
+
+
+       
+  </div>
+  
+  <footer onclick="">
+    <div class="social-menu"onclick="">  
+        <ul>  
+          <li><a href="" target="blank"><i class="fab fa-instagram"></i></a></li>  
+          <li><a href="" target="blank"><i class="fab fa-linkedin-in"></i></a></li>  
+          <li><a href="" target="blank"><i class="fab fa-facebook" target="blank"></i></a></li> 
+          <li><a href="" target="blank"><i class="fab fa-github"></i></i></a></li> 
+          <li><a href="" target="blank"><i class="fab fa-twitter"></i></i></a></li>
+        </ul>  
+      </div>  
+      <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    
+</footer>
+</body>
+
+</html>
